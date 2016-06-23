@@ -1,0 +1,6 @@
+{
+  "name": "polycast-test-app",
+  "short_name": "polycast-test-app",
+  "start_url": "/",
+  "display": "standalone"
+}
