@@ -33,14 +33,14 @@
     </style>
   </head>
   <body class="fullbleed layout vertical">
-    <template is="dom-bind" id="tmpl">
+    <template is="dom-bind" id="app">
       <paper-drawer-panel id="drawerPanel">
         <paper-header-panel drawer class="flex" mode="waterfall">
           <paper-toolbar class="my-toolbar">Menu</paper-toolbar>
-          <paper-menu attr-for-selected="name" selected="{{ page }}">
-            <paper-item name="home">Home</paper-item>
-            <paper-item name="quote">Quote</paper-item>
-            <paper-item name="blog">Blog</paper-item>
+          <paper-menu attr-for-selected="data-route" selected="{{ route }}">
+            <paper-item data-route="home">Home</paper-item>
+            <paper-item data-route="quote">Quote</paper-item>
+            <paper-item data-route="blog">Blog</paper-item>
           </paper-menu>
         </paper-header-panel>
         <paper-header-panel main class="flex" mode="waterfall">
@@ -55,8 +55,8 @@
           </paper-toolbar>
 
           <div class="container fit layout vertical">
-            <iron-pages selected="{{ page }}" attr-for-selected="name">
-              <section name="home">
+            <iron-pages selected="{{ route }}" attr-for-selected="data-route">
+              <section data-route="home">
                 <div class="banner layout vertical center">
                   <div class="my-circle"></div>
                   <div class="layout flex horizontal">
@@ -67,14 +67,14 @@
                   </div>
                 </div>
               </section>
-              <section name="quote">
+              <section data-route="quote">
                 <div class="quote layout vertical center">
                   <div class="rect quote dark"></div>
                   <div class="rect quote light"></div>
                   <div class="rect quote light"></div>
                 </div>
               </section>
-              <section name="blog">
+              <section data-route="blog">
                 <div class="blog-container">
                   <div class="blog layout vertical">
                     <div class="photo"></div>
@@ -91,6 +91,7 @@
       </paper-drawer-panel>
     </template>
 
+    <script src="bower_components/page/page.js"></script>
     <script src="app.js"></script>
 
   </body>

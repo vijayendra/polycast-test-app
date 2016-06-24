@@ -6,7 +6,8 @@
   "private": true,
   "dependencies": {
     "iron-elements": "PolymerElements/iron-elements#^1.0.10",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.7"
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "page": "page.js#^1.7.1"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
