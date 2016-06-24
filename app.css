@@ -36,9 +36,9 @@ body {
 [drawer] {
   background-color: #FFFFFF;
 }
-paper-drawer-panel:not([narrow]) #navicon {
-  display: none;
-}
+
+
+
 
 
 

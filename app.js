@@ -26,10 +26,3 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-document.addEventListener('WebComponentsReady', function() {
-  var navicon = document.getElementById('navicon');
-  var drawerPanel = document.getElementById('drawerPanel');
-  navicon.addEventListener('click', function() {
-    drawerPanel.togglePanel();
-  });
-});
