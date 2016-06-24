@@ -28,7 +28,7 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 body {
-  font-family: sans-serif;
+  font-family: Roboto, 'Helvetica', sans-serif;
 }
 [main] {
   background-color: #F9F9F9;
@@ -36,9 +36,9 @@ body {
 [drawer] {
   background-color: #FFFFFF;
 }
-paper-drawer-panel:not([narrow]) #navicon {
-  display: none;
-}
+
+
+
 
 
 
@@ -70,6 +70,7 @@ paper-drawer-panel:not([narrow]) #navicon {
 .container {
   background: #ffffff;
   padding: 50px 0;
+  text-align: center;
 }
 
 collapse-toolbar,
