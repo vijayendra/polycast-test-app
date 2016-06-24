@@ -1,4 +1,3 @@
-@license
 // Copyright (c) 2014 The Polymer Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,130 +26,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-body {
-  font-family: sans-serif;
-}
-[main] {
-  background-color: #F9F9F9;
-}
-[drawer] {
-  background-color: #FFFFFF;
-}
-paper-drawer-panel:not([narrow]) #navicon {
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CSS for page shapes below */
-
-
-*, *::before, *::after {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.container {
-  background: #ffffff;
-  padding: 50px 0;
-}
-
-collapse-toolbar,
-.container {
-  border-bottom: 4px solid #C3C8CD;
-}
-
-.quote-container {
-  background-color: #E4E4E4;
-}
-
-.blog-container {
-  padding: 50px 15%;
-}
-
-.my-circle {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: #C3C8CD;
-  margin-bottom: 25px;
-}
-
-.rect {
-  border-radius: 2px;
-  width: 70px;
-  height: 15px;
-  background-color: #C3C8CD;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.light {
-  background-color: #CFD3D6;
-}
-
-.stretch {
-  width: 95%;
-}
-
-.quote.dark {
-  height: 20px;
-  width: 200px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.quote.light {
-  width: 350px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.blog {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.photo {
-  border-radius: 2px;
-  width: 150px;
-  height: 150px;
-  background-color: #C3C8CD;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 500px) {
-  .banner .rect {
-    width: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .quote.dark {
-    width: 150px;
-  }
-
-  .quote.light {
-    width: 250px;
-  }
-}
+document.addEventListener('WebComponentsReady', function() {
+  var navicon = document.getElementById('navicon');
+  var drawerPanel = document.getElementById('drawerPanel');
+  navicon.addEventListener('click', function() {
+    drawerPanel.togglePanel();
+  });
+});
