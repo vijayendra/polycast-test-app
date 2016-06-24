@@ -26,13 +26,30 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-var tmpl = document.querySelector("#tmpl");
-tmpl.page="home";
+var app = document.querySelector("#app");
+app.page="home";
 
-tmpl.addEventListener("dom-change", function(){
+app.addEventListener("dom-change", function(){
   var drawerPanel = document.querySelector("#drawerPanel");
   var paperMenu = document.querySelector("paper-menu");
   paperMenu.addEventListener("click", function(){
     drawerPanel.togglePanel();
   });
 });
+
+page("/", home);
+page("/home", home);
+page("/quote", quote);
+page("/blog", blog);
+
+page({hashbang: true});
+
+function home(){
+  app.route = "home";
+}
+function quote(){
+  app.route = "quote";
+}
+function blog(){
+  app.route = "blog";
+}
