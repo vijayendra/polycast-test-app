@@ -9,15 +9,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-    <link rel="import" href="bower_components/iron-icon/iron-icon.html">
-    <link rel="import"
-          href="bower_components/paper-icon-button/paper-icon-button.html">
-    <link rel="import"
-          href="bower_components/paper-toolbar/paper-toolbar.html">
-    <link rel="import"
-          href="bower_components/paper-progress/paper-progress.html">
-    <link rel="import" href="custom-icons.html">
+    <link rel="import" href="elements.html" />
+
+    <link rel="stylesheet" href="app.css" type="text/css"/>
+
     <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning">
      paper-toolbar.my-toolbar{
        --paper-toolbar-background: #03A9F4;
@@ -38,15 +33,83 @@
 
     </style>
   </head>
-  <body class="fullbleed">
-    <paper-toolbar class="my-toolbar medium-tall">
-      <paper-icon-button icon="custom-icons:menu"></paper-icon-button>
-      <span class="bottom title">
-        My App
-      </span>
-      <paper-progress class="bottom fit" value="60"></paper-progress>
-      <span class="flex"></span>
-      <paper-icon-button icon="custom-icons:search"></paper-icon-button>
-    </paper-toolbar>
+  <body class="fullbleed layout vertical">
+    <paper-header-panel class="flex" mode="waterfall">
+      <paper-toolbar class="my-toolbar">
+        <paper-icon-button icon="custom-icons:menu"></paper-icon-button>
+        <span class="bottom title">
+          My App
+        </span>
+        <paper-progress class="bottom fit" value="60"></paper-progress>
+        <span class="flex"></span>
+        <paper-icon-button icon="custom-icons:search"></paper-icon-button>
+      </paper-toolbar>
+      <div class="content">
+        <div class="container banner-container">
+          <div class="banner layout vertical center">
+            <div class="my-circle"></div>
+            <div class="layout flex horizontal">
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container quote-container">
+          <div class="quote layout vertical center">
+            <div class="rect quote dark"></div>
+            <div class="rect quote light"></div>
+            <div class="rect quote light"></div>
+          </div>
+        </div>
+        <div class="container blog-container">
+          <div class="photo"></div>
+          <div class="rect blog light"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+        </div>
+        <div class="container quote-container">
+          <div class="quote layout vertical center">
+            <div class="rect quote dark"></div>
+            <div class="rect quote light"></div>
+            <div class="rect quote light"></div>
+          </div>
+        </div>
+        <div class="container blog-container">
+          <div class="photo"></div>
+          <div class="rect blog light"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+        </div>
+        <div class="container banner-container">
+          <div class="banner layout vertical center">
+            <div class="my-circle"></div>
+            <div layout flex horizontal>
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+              <div flex class="rect"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container quote-container">
+          <div class="quote layout vertical center">
+            <div class="rect quote dark"></div>
+            <div class="rect quote light"></div>
+            <div class="rect quote light"></div>
+          </div>
+        </div>
+        <div class="container blog-container">
+          <div class="photo"></div>
+          <div class="rect blog light"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+          <div class="rect blog stretch"></div>
+        </div>
+      </div>
+    </paper-header-panel>
   </body>
 </html>
