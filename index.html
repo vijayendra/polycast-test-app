@@ -12,7 +12,6 @@
     <link rel="import" href="elements.html" />
 
     <link rel="stylesheet" href="app.css" type="text/css"/>
-
     <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning">
      paper-toolbar.my-toolbar{
        --paper-toolbar-background: #03A9F4;
@@ -34,82 +33,97 @@
     </style>
   </head>
   <body class="fullbleed layout vertical">
-    <paper-header-panel class="flex" mode="waterfall">
-      <paper-toolbar class="my-toolbar">
-        <paper-icon-button icon="custom-icons:menu"></paper-icon-button>
-        <span class="bottom title">
-          My App
-        </span>
-        <paper-progress class="bottom fit" value="60"></paper-progress>
-        <span class="flex"></span>
-        <paper-icon-button icon="custom-icons:search"></paper-icon-button>
-      </paper-toolbar>
-      <div class="content">
-        <div class="container banner-container">
-          <div class="banner layout vertical center">
-            <div class="my-circle"></div>
-            <div class="layout flex horizontal">
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
+    <paper-drawer-panel id="drawerPanel">
+      <paper-header-panel drawer class="flex" mode="waterfall">
+        <paper-toolbar class="my-toolbar">Menu</paper-toolbar>
+        <paper-menu>
+          <paper-item>Inbox</paper-item>
+          <paper-item>Starred</paper-item>
+          <paper-item>Sent mail</paper-item>
+          <paper-item>Drafts</paper-item>
+        </paper-menu>
+      </paper-header-panel>
+      <paper-header-panel main class="flex" mode="waterfall">
+        <paper-toolbar class="my-toolbar">
+          <paper-icon-button id="navicon" icon="custom-icons:menu"></paper-icon-button>
+          <span class="bottom title">
+            My App
+          </span>
+          <paper-progress class="bottom fit" value="60"></paper-progress>
+          <span class="flex"></span>
+          <paper-icon-button icon="custom-icons:search"></paper-icon-button>
+        </paper-toolbar>
+
+        <div class="content">
+          <div class="container banner-container">
+            <div class="banner layout vertical center">
+              <div class="my-circle"></div>
+              <div class="layout flex horizontal">
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container quote-container">
-          <div class="quote layout vertical center">
-            <div class="rect quote dark"></div>
-            <div class="rect quote light"></div>
-            <div class="rect quote light"></div>
-          </div>
-        </div>
-        <div class="container blog-container">
-          <div class="photo"></div>
-          <div class="rect blog light"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-        </div>
-        <div class="container quote-container">
-          <div class="quote layout vertical center">
-            <div class="rect quote dark"></div>
-            <div class="rect quote light"></div>
-            <div class="rect quote light"></div>
-          </div>
-        </div>
-        <div class="container blog-container">
-          <div class="photo"></div>
-          <div class="rect blog light"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-        </div>
-        <div class="container banner-container">
-          <div class="banner layout vertical center">
-            <div class="my-circle"></div>
-            <div layout flex horizontal>
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
-              <div flex class="rect"></div>
+          <div class="container quote-container">
+            <div class="quote layout vertical center">
+              <div class="rect quote dark"></div>
+              <div class="rect quote light"></div>
+              <div class="rect quote light"></div>
             </div>
           </div>
-        </div>
-        <div class="container quote-container">
-          <div class="quote layout vertical center">
-            <div class="rect quote dark"></div>
-            <div class="rect quote light"></div>
-            <div class="rect quote light"></div>
+          <div class="container blog-container">
+            <div class="photo"></div>
+            <div class="rect blog light"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
+          </div>
+          <div class="container quote-container">
+            <div class="quote layout vertical center">
+              <div class="rect quote dark"></div>
+              <div class="rect quote light"></div>
+              <div class="rect quote light"></div>
+            </div>
+          </div>
+          <div class="container blog-container">
+            <div class="photo"></div>
+            <div class="rect blog light"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
+          </div>
+          <div class="container banner-container">
+            <div class="banner layout vertical center">
+              <div class="my-circle"></div>
+              <div layout flex horizontal>
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+                <div flex class="rect"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container quote-container">
+            <div class="quote layout vertical center">
+              <div class="rect quote dark"></div>
+              <div class="rect quote light"></div>
+              <div class="rect quote light"></div>
+            </div>
+          </div>
+          <div class="container blog-container">
+            <div class="photo"></div>
+            <div class="rect blog light"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
+            <div class="rect blog stretch"></div>
           </div>
         </div>
-        <div class="container blog-container">
-          <div class="photo"></div>
-          <div class="rect blog light"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-          <div class="rect blog stretch"></div>
-        </div>
-      </div>
-    </paper-header-panel>
+      </paper-header-panel>
+    </paper-drawer-panel>
+
+    <script src="app.js"></script>
+
   </body>
 </html>
