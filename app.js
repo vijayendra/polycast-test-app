@@ -27,9 +27,12 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 var tmpl = document.querySelector("#tmpl");
-tmpl.heading = "My App";
-tmpl.selected = 0;
+tmpl.page="home";
 
 tmpl.addEventListener("dom-change", function(){
-  console.log(document.querySelector("paper-menu"));
+  var drawerPanel = document.querySelector("#drawerPanel");
+  var paperMenu = document.querySelector("paper-menu");
+  paperMenu.addEventListener("click", function(){
+    drawerPanel.togglePanel();
+  });
 });
