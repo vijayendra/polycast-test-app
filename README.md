@@ -10,4 +10,4 @@ Install using bower
 
 ## Run as ##
 
-`polymer serve -o`
+`polymer serve -H 0.0.0.0 -p 9090 -o`
