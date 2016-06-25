@@ -28,6 +28,7 @@
 
 var app = document.querySelector("#app");
 app.route="home";
+app.data = generateContacts();
 
 app.addEventListener("dom-change", function(){
   var drawerPanel = document.querySelector("#drawerPanel");
@@ -41,6 +42,7 @@ page("/", home);
 page("/home", home);
 page("/quote", quote);
 page("/blog", blog);
+page("/contacts", contacts);
 
 page({hashbang: true});
 
@@ -52,4 +54,19 @@ function quote(){
 }
 function blog(){
   app.route = "blog";
+}
+function contacts(){
+  app.route = "contacts";
+}
+
+function generateContacts(){
+  var data = [];
+  for(var i=0; i< 1000; i++){
+    data.push({
+      name: faker.name.findName(),
+      avatar: faker.internet.avatar()
+    });
+  }
+  console.log("Data length: " + data.length);
+  return data;
 }

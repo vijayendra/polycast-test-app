@@ -32,8 +32,9 @@
 
     </style>
   </head>
-  <body class="fullbleed layout vertical">
+  <body class="fullbleed fit layout vertical">
     <template is="dom-bind" id="app">
+
       <paper-drawer-panel id="drawerPanel">
         <paper-header-panel drawer class="flex" mode="waterfall">
           <paper-toolbar class="my-toolbar">Menu</paper-toolbar>
@@ -41,6 +42,7 @@
             <paper-item data-route="home">Home</paper-item>
             <paper-item data-route="quote">Quote</paper-item>
             <paper-item data-route="blog">Blog</paper-item>
+            <paper-item data-route="contacts">Contacts</paper-item>
           </paper-menu>
         </paper-header-panel>
         <paper-header-panel main class="flex" mode="waterfall">
@@ -60,10 +62,10 @@
                 <div class="banner layout vertical center">
                   <div class="my-circle"></div>
                   <div class="layout flex horizontal">
-                    <div flex class="rect"></div>
-                    <div flex class="rect"></div>
-                    <div flex class="rect"></div>
-                    <div flex class="rect"></div>
+                    <div class="flex rect"></div>
+                    <div class="flex rect"></div>
+                    <div class="flex rect"></div>
+                    <div class="flex rect"></div>
                   </div>
                 </div>
               </section>
@@ -85,12 +87,27 @@
                   </div>
                 </div>
               </section>
+              <section data-route="contacts">
+                <iron-list items="[[data]]" as="item" class="layout vertical flex">
+                  <template>
+                    <div class="row layout horizontal center">
+                      <iron-image class="avatar"
+                                  src="[[item.avatar]]"
+                                  preload
+                                  sizing="cover">
+                      </iron-image>
+                      <div>[[ item.name ]]</div>
+                    </div>
+                  </template>
+                </iron-list>
+              </section>
             </iron-pages>
           </div>
         </paper-header-panel>
       </paper-drawer-panel>
     </template>
 
+    <script src="bower_components/faker/build/build/faker.min.js"></script>
     <script src="bower_components/page/page.js"></script>
     <script src="app.js"></script>
 
