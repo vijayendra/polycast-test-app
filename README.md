@@ -10,4 +10,6 @@ Install using bower
 
 ## Run as ##
 
-`polymer serve -o`
+`polymer serve -H 0.0.0.0 -p 9090`
+
+Then open browser: http://0.0.0.0:9090/components/my-app/demo/index.html
