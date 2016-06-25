@@ -27,7 +27,7 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 var app = document.querySelector("#app");
-app.page="home";
+app.route="home";
 
 app.addEventListener("dom-change", function(){
   var drawerPanel = document.querySelector("#drawerPanel");
