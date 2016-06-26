@@ -81,17 +81,14 @@
        }
      }
     </style>
-    <div class="fullname">{{ fullname }}</div>
+    <div class="fullname">{{ _computeFullname(first, last) }}</div>
   </template>
   <script>
    Polymer({
      is: "name-tag",
      properties: {
        first: String,
-       last: String,
-       fullname: {
-         computed: '_computeFullname(first, last)'
-       }
+       last: String
      },
      _computeFullname: function(first, last){
        return first + ' ' + last ;
