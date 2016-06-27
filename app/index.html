@@ -173,9 +173,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
 
             <section data-route="contact" tabindex="-1">
-              <paper-material elevation="1">
+              <paper-material elevation="1" id="contactCard">
                 <h1 class="page-title" tabindex="-1">Contact</h1>
-                <p>This is the contact section</p>
+                <h2 class="paper-font-display2">Come visit us!</h2>
+                <paper-button on-tap="showMap">Show me the map</paper-button>
               </paper-material>
             </section>
           </iron-pages>
@@ -188,7 +189,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </paper-toast>
 
     <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
+    
     <paper-toast id="caching-complete"
                  duration="6000"
                  text="Caching complete! This app will work offline.">
@@ -203,7 +204,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                          cache-config-file="cache-config.json">
       </platinum-sw-cache>
     </platinum-sw-register>
-    -->
+    
 
   </template>
 

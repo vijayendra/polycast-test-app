@@ -181,6 +181,7 @@ gulp.task('vulcanize', function() {
 // See https://github.com/PolymerElements/polymer-starter-kit#enable-service-worker-support
 // for more context.
 gulp.task('cache-config', function(callback) {
+  console.log("running cache config");
   var dir = dist();
   var config = {
     cacheId: packageJson.name || path.basename(__dirname),
@@ -191,7 +192,7 @@ gulp.task('cache-config', function(callback) {
     'index.html',
     './',
     'bower_components/webcomponentsjs/webcomponents-lite.min.js',
-    '{elements,scripts,styles}/**/*.*'],
+    '{elements,scripts,styles,images}/**/*.*'],
     {cwd: dir}, function(error, files) {
     if (error) {
       callback(error);
@@ -272,7 +273,7 @@ gulp.task('default', ['clean'], function(cb) {
   runSequence(
     ['ensureFiles', 'copy', 'styles'],
     ['images', 'fonts', 'html'],
-    'vulcanize', // 'cache-config',
+    'vulcanize', 'cache-config',
     cb);
 });
 
