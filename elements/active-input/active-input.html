@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../pressed-behavior/pressed-behavior.html">
+
+<dom-module id="active-input">
+  <template>
+    <style>
+     :host {
+       display: inline-block;
+     }
+     :host(.pressed) input{
+       box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+     }
+    </style>
+    <input type="text" />
+  </template>
+  <script>
+   Polymer({
+     is: "active-input",
+     behaviors: [MyBehaviors.PressedBehavior],
+     _onPressEnd: function(){
+       alert('aw come back!');
+     }
+   });
+  </script>
+</dom-module>
