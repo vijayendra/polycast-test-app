@@ -78,4 +78,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.$.paperDrawerPanel.closeDrawer();
   };
 
+  app.showMap = function(){
+    if (app.hasMap){
+      return;
+    }
+
+    var map = document.createElement('img');
+    map.classList.add('map');
+    map.src = 'images/map.jpg';
+    map.alt = 'A map of our location';
+    this.$.contactCard.appendChild(map);
+    app.hasMap = true;
+  };
+
 })(document);
