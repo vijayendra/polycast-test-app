@@ -85,6 +85,9 @@
          }
        }
      },
+     listeners: {
+       'neon-animation-finish': '_onNeonAnimationFinish'
+     },
      show: function(){
        this.opened = true;
        this.style.display = 'inline-block';
@@ -93,9 +96,13 @@
      },
      hide: function(){
        this.opened = false;
-       this.style.display = 'none';
        this.cancelAnimation();
        this.playAnimation('exit');
+     },
+     _onNeonAnimationFinish: function(){
+       if (!this.opened){
+         this.style.display = 'none';
+       }
      }
    });
   </script>
