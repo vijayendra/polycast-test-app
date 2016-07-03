@@ -1,0 +1,20 @@
+{
+  "name": "polycast-test-app",
+  "homepage": "https://github.com/vijayendra/polycast-test-app",
+  "authors": [
+    "Vijayendra Bapte"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-ajax": "PolymerElements/iron-ajax#^1.2.1"
+  }
+}
