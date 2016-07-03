@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Convenient Pages</title>
-    <meta name="description" content="My Convenient neon animation pages">
+    <title>Shared Elements</title>
+    <meta name="description" content="Shared Elements">
 
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -23,47 +23,36 @@
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
     <link rel="import" href="bower_components/neon-animation/neon-animation.html">
     <link rel="import" href="bower_components/neon-animation/neon-animations.html">
-    <link rel="import" href="elements/color-page/color-page.html">
+    <link rel="import" href="elements/main-page/main-page.html">
+    <link rel="import" href="elements/detail-page/detail-page.html">
 
     <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning">
+     body {
+       font-family: 'Roboto', sans-serif;
+     }
      neon-animated-pages {
        overflow: hidden;
-       cursor: pointer;
-     }
-     color-page:nth-of-type(1) {
-       background: #0085FF;
-     }
-     color-page:nth-of-type(2) {
-       background: #FF0011;
-     }
-     color-page:nth-of-type(3) {
-       background: #FFB600;
-     }
-     color-page:nth-of-type(4) {
-       background: #00B745;
      }
     </style>
-
   </head>
-  <body class="fullbleed layout vertical">
+  <body class="fullbleed layout vertical" unresolved>
     <template is="dom-bind" id="app">
       <neon-animated-pages class="flex"
                            selected="[[ selected ]]"
                            on-tap="next"
                            entry-animation="scale-up-animation"
                            exit-animation="fade-out-animation">
-        <color-page></color-page>
-        <color-page></color-page>
-        <color-page></color-page>
-        <color-page></color-page>
+        <main-page></main-page>
+        <detail-page></detail-page>
       </neon-animated-pages>
     </template>
     <script>
      var app = document.querySelector("#app");
-     app.selected = 0
+     app.selected = 0;
      app.next = function(){
-       console.log("next called");
-       this.selected = this.selected === 3 ? 0 : this.selected + 1;
+       if (app.selected === 0){
+         app.selected = 1;
+       }
      }
     </script>
   </body>
