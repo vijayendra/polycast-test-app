@@ -1,8 +1,9 @@
 # Polycast Examples #
 
 I found that most of the examples provded in [Rob Dodson's Polycast](https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
-was related to older version of Polymer 0.5. Here is my attempt to covert those examples with latest version of Polymer 1.0. Going to put it in
-Github repo so that it will be availbale to someone who is following episodes in Polycast but want to write with Polymer 1.0.
+are outdated. Here is my attempt to covert those examples with latest version of Polymer 1.0. It will be easy for somone who is going through
+the episodes but wanted to write it in Polymer 1.0.
+
 
 ## Examples
 
