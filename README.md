@@ -9,7 +9,7 @@ the episodes but wanted to write it in Polymer 1.0.
 
 Created a branch related to polycast episode.
 
-1.  [03-paper-toolbar](https://github.com/vijayendra/polycast-test-app/tree/03-paper-toolbar/03-paper-toolbar) 
+1.  [03-paper-toolbar](https://github.com/vijayendra/polycast-test-app/tree/03-paper-toolbar) 
 1.  [04-paper-header-panel](https://github.com/vijayendra/polycast-test-app/tree/04-paper-header-panel)
 1.  [05-paper-drawer-panel](https://github.com/vijayendra/polycast-test-app/tree/05-paper-drawer-panel)
 1.  [08-auto-binding](https://github.com/vijayendra/polycast-test-app/tree/08-auto-binding)
