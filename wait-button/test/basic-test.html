@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>WCT</title>
+    <meta name="description" content="WCT">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+
+    <!-- Safari / iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+
+    <!-- Web Components -->
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <link rel="import" href="../wait-button.html">
+
+  </head>
+  <body>
+    <test-fixture id="wait-button-fixture">
+      <template>
+        <wait-button></wait-button>
+      </template>
+    </test-fixture>
+
+    <script>
+     suite('<wait-button>', function(){
+       var myEl;
+
+       setup(function(){
+         myEl = fixture('wait-button-fixture');
+       });
+
+       test('click sets isWaiting to true', function(){
+         Polymer.dom(myEl.root).querySelector('button').click();
+         assert.equal(myEl.isWaiting, true);
+       });
+
+       test('fires an event when waiting', function(done){
+         myEl.addEventListener('waiting', function(e){
+           assert.equal(e.detail.message, 'Time for some meditation');
+           done();
+         });
+
+         Polymer.dom(myEl.root).querySelector('button').click();
+       });
+     });
+    </script>
+  </body>
+</html>
