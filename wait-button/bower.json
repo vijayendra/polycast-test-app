@@ -1,0 +1,25 @@
+{
+    "name": "wait-button",
+    "homepage": "https://github.com/vijayendra/polycast-test-app",
+    "authors": [
+        "Vijayendra Bapte"
+    ],
+    "description": "",
+    "main": "",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.3.1",
+        "paper-spinner": "PolymerElements/paper-spinner#^1.2.0"
+    },
+    "devDependencies": {
+        "iron-component-page": "PolymerElements/iron-component-page#^1.1.7",
+        "web-component-tester": "*"
+    }
+}

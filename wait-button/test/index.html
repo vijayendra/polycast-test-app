@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Iron Ajax</title>
-    <meta name="description" content="Iron Ajax">
+    <title>WCT</title>
+    <meta name="description" content="WCT">
 
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -19,17 +19,15 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
     <!-- Web Components -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="gh-issues/gh-issues.html">
-
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
   </head>
-  <body unresolved>
-    <template is="dom-bind">
-      <gh-issues owner="{{ owner }}" repo="{{ repo }}" state="{{ state }}" page="{{ page }}"></gh-issues>
-      <input type="text" value="{{ owner::change }}">
-      <input type="text" value="{{ repo::change }}">
-      <input type="text" value="{{ state::change }}">
-      <input type="text" value="{{ page::change }}">
-    </template>
+  <body>
+    <script>
+     WCT.loadSuites([
+       'basic-test.html',
+       'basic-test.html?dom=shadow'
+     ])
+    </script>
   </body>
 </html>
