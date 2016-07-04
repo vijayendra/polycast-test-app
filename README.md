@@ -35,7 +35,6 @@ Created a branch related to polycast episode.
 ```
 $ git clone https://github.com/vijayendra/polycast-test-app.git
 $ cd polycast-test-app
-$ git fetch
 $ git checkout <branch-name>
 $ bower install
 $ polymer serve -o
