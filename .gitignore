@@ -1,6 +1,6 @@
 node_modules
 dist
-wait-button/bower_components/
+bower_components/
 .tmp
 .publish/
 *~
