@@ -1,6 +1,5 @@
-node_modules
+vulcanize-app/node_modules
+bower_components
 dist
-bower_components/
-.tmp
-.publish/
-*~
+node_modules
+build

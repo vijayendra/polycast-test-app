@@ -29,6 +29,7 @@ Created a branch related to polycast episode.
 -  [26-iron-ajax](https://github.com/vijayendra/polycast-test-app/tree/26-iron-ajax)
 -  [36-web-component-tester](https://github.com/vijayendra/polycast-test-app/tree/36-web-component-tester)
 -  [37-ajax-web-component-tester](https://github.com/vijayendra/polycast-test-app/tree/37-ajax-web-component-tester)
+-  [39-vulcanize](https://github.com/vijayendra/polycast-test-app/tree/39-vulcanize)
 
 ## Install ##
 
