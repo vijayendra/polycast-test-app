@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Test AJAX</title>
-    <meta name="description" content="Test AJAX">
+    <title>Vulcanize App</title>
+    <meta name="description" content="">
 
     <!-- Mobile -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -19,15 +19,12 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
     <!-- Web Components -->
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="elements/elements.html">
 
   </head>
-  <body>
-    <script>
-     WCT.loadSuites([
-       'iron-ajax.html'
-     ])
-    </script>
+  <body unresolved>
+    <x-foo>Foo</x-foo>
+    <x-bar>Bar</x-bar>
   </body>
 </html>
