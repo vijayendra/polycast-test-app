@@ -4,12 +4,14 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "postinstall": "bower install"
   },
-  "author": "",
+  "author": "Vijayendra Bapte",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-crisper": "^1.1.0",
     "gulp-vulcanize": "^6.1.0",
     "live-server": "^1.0.0"
   }
