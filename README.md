@@ -1,6 +1,6 @@
 # Polycast Examples #
 
-I found that most of the examples provded in [Rob Dodson's Polycast](https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
+I found that most of the examples in [Rob Dodson's Polycast](https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 are outdated. Here is my attempt to covert those examples with latest version of Polymer 1.0. It will be easy for somone who is going through
 the episodes but wanted to write it in Polymer 1.0.
 
